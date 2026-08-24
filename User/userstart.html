@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="userparking.css">
+  <title>Start Parking - UDP Parking</title>
+</head>
+<body>
+  <header>
+    <div class="logo"><a href="/User/index.html">
+        <img src="./images/logo.png" alt="Logo" />
+    </a></div>
+    <div class="features" id="features">  
+      <div class="feature"><a href="./assistance.html"> Help Desk </a></div>
+      <div class="feature"><a href="./AccountSettings/accountSettings.html"> Account Settings </a></div>
+      <div class="feature"><a href="/logout.html"> Log Out </a></div>
+    </div>
+  </header>
+  <div class="maincontainer">
+    <div class="welcometext">
+      <h1> User ID: </h1><h2 id="userid"></h2>
+      <h2> Welcome to UDP Parking</h2>
+    </div>
+    <div class="parking-container">
+        <div class="formcontainer">
+          <form action="https://backend.svrcd.xyz/parking/startParking.php" method="POST" id="form">
+            <input type="hidden" id="token" name="token">
+            <label for="parkinglot">Parking Lot Number:</label><br>
+            <input type="text" id="lotID" name="lotID" required> <br>
+            <label for="plateNo">Car Plate Number:</label><br>
+            <input type="text" id="plateNo" name="plateNo" required><br><br>
+            <div class="btncontainer">
+              <button class="confirmbtn" type="submit" onclick="start();">
+                <p> Confirm Details </p>
+              </button> 
+            </div>
+          </form>
+        </div>
+    </div>
+  </div>
+</body>
+
+<footer>
+  <div class=footercontainer>
+    <div class="column1">
+      <img src="./images/WordLogo.png">
+    </div>
+    <div class="column2">
+      <h3> Contact for Assistance </h3> <br> 
+      <p> Phone Number: +601223334444 <br> 
+      Email: udp.support@gmail.com </p>
+    </div>
+  </div>
+</footer>
+
+<script src ="/script/api.js"> </script>
+<script src ="./script/userstart.js"> </script>
+</html>

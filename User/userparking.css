@@ -1,0 +1,283 @@
+* {
+    margin : 0;
+    padding: 0;
+  }
+
+body{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.maincontainer {
+  background-image: url(./images/Carpar.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #cccccc;
+}
+
+h1 {
+  color: #cccccc;
+}
+
+h2 {
+  color: #cccccc;
+  text-align: center;
+}
+
+.formcontainer {
+  border-style: solid;
+  padding: 30px;
+  margin: 30px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  color: #000000;
+  background-color: rgba(82, 119, 240, 0.753);
+  border-radius: 15px;
+}
+
+.formcontainer input {
+  padding: 8px;
+  font-size: 18px;
+  border-radius: 4px;
+  width: 100%;
+  border: 2px solid black;
+  padding: 10px 40px 10px 10px;
+  background: rgb(128, 128, 128, 0.6);
+}
+
+
+form {
+  text-align: center;
+  display: block;
+  padding: 30px;
+  font-size: 2rem;
+}
+
+table {
+  width: 30%;
+  border-collapse: collapse;
+  border-radius: 18px;
+  background-color: #e6f9f1; /* Soft Mint */
+}
+
+table.center{
+  margin-left: auto;
+  margin-right: auto;
+}
+
+th, td {
+  padding: 10px;
+  text-align: left;
+  border: 1px solid #d3c9c9f0;
+  text-align: center;
+}
+
+th {
+  font-style: bold;
+  background-color: #809fbe; 
+}
+
+td {
+  background-color: #dae4ee; /*Iceberg (Shade of blue) */
+}
+
+.img {
+  text-align: center;
+}
+
+.btncontainer {
+  display: flex;
+  justify-content: center;
+}
+
+.confirmbtn {
+  margin: 25px;
+  padding: 20px;
+  font-size: 20px;
+  border-radius: 10px;
+  background-color: #9dafec;
+  cursor: pointer; 
+}
+
+.endbtn {
+  padding: 10px;
+  margin: 20px;
+  font-size: 20px;
+  border-radius: 10px;
+  background-color: rgb(42, 87, 233);
+  cursor: pointer;
+}
+
+/* Add hover effect */
+.confirmbtn:hover {
+  background-color: #9dafec;
+}
+
+.confirmbtn a {
+  text-decoration: none;
+}
+
+.welcometext {
+  padding: 20px;
+  text-align: center;
+}
+  
+  @media (max-width: 1400px) {
+    /* Adjust the margin/width accordingly. */
+    .button {
+      margin: 10px 5px;
+    }
+  }
+  
+  
+  /* Header CSS */
+
+header {
+  background-color: #222222;
+  color: white;
+  padding: 10px 20px;
+  display: flex;
+  justify-content:space-between;
+  align-items:center;
+}
+  
+  .logo {
+    font-size: 24px;
+  }
+  
+  .logo img {
+    padding-left: 10px;
+    width: 130px;
+    height: 130px;
+  }
+  
+  .features {
+    font-size: 22px;
+    display: flex;
+    gap: 30px;
+  }
+  
+  .feature {
+    cursor: pointer;
+  }
+  
+  .feature a {
+    text-decoration: none;
+    color: inherit;
+   } 
+  
+  
+  /*---------------------------------------*/
+  /*Footer CSS*/
+
+footer {
+  bottom: 0;
+  position: relative;
+  width: 100%;
+  margin-top: auto;
+  }
+  
+  .footercontainer {
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  background-color: #222222;
+  width: 100%;
+  height: 130px;
+  }
+  
+  .column1 img {
+  padding: 20px 0px 0px 30px;
+  width: 300px;
+  max-height: 110px;
+  }
+  
+  .column2 h3, p{
+  color: white;
+  text-align: center;
+  }
+  
+  .column2 {
+  padding-top: 25px;
+  padding-right: 30px;
+  }
+
+/* ------------ modal styling -------------*/
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.4);
+}
+.modal-content {
+  position: relative;
+  background-color: #fff;
+  margin: auto;
+  padding: 0;
+  width: 450px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s;
+  border-radius: 0.3rem;
+}
+.modal-header {
+  padding: 2px 12px;
+  background-color: #ffffff;
+  color: #333;
+  border-bottom: 1px solid #e9ecef;
+  border-top-left-radius: 0.3rem;
+  border-top-right-radius: 0.3rem;
+}
+.modal-header h2{
+  font-size: 1.25rem;
+  margin-top: 14px;
+  margin-bottom: 14px;
+}
+.modal-body {
+  padding: 5px 12px;
+}
+.modal-footer {
+  padding: 1rem;
+  background-color: #ffffff;
+  color: #333;
+  border-top: 1px solid #e9ecef;
+  border-bottom-left-radius: 0.3rem;
+  border-bottom-right-radius: 0.3rem;
+  text-align: right;
+}
+
+.close {
+  color: #888;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+.close:hover, .close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* add animation effects */
+@-webkit-keyframes animatetop {
+  from {top:-300px; opacity:0}
+  to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+  from {top:-300px; opacity:0}
+  to {top:0; opacity:1}
+}

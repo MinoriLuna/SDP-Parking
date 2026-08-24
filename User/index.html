@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="userpage.css">
+  <title>User - UDP Parking</title>
+</head>
+<body>
+  <header>
+    <div class="logo"><a href="/User/index.html">
+        <img src="./images/logo.png" alt="Logo" />
+    </a></div>
+    <div class="features" id="features">  
+      <div class="feature"><a href="./assistance.html"> Help Desk </a></div>
+      <div class="feature"><a href="./AccountSettings/accountSettings.html"> Account Settings </a></div>
+      <div class="feature"><a href="/logout.html"> Log Out </a></div>
+    </div>
+  </header>
+
+  <div class="maincontainer">
+    <div class="welcometext">
+      <h1> Welcome to UDP Parking! </h1>
+      <h2> User ID: </h2><h2 id="userid"></h2>
+      <h2> Please select the function you would like to access.</h2>
+    </div>
+    <div class="button-container">
+      <button class="button">
+        <a href="./userparking.html">
+        <img src ="./images/ParkingSpotsFn.jpg" alt="Empty Lots"> <br>
+        <p>Parking Spots</p> </a>
+      </button>
+      
+      <button class="button">
+        <a href="./userstart.html">
+        <img src="./images/parking.jpg" alt="Start Parking"> <br>
+        <p>Start Parking</p></a>
+      </button>
+      
+      <button class="button">
+        <a href="./userend.html">
+        <img src="./images/end.png" alt="End Parking"> <br>
+        <p>End Parking</p></a>
+      </button>
+
+      <button class="button">
+        <a href="./userhistory.html">
+        <img src="./images/history.png" alt="History"> <br>
+        <p>History</p> </a>
+      </button>
+    </div>
+  </div>      
+</body>
+
+<footer>
+    <div class = footercontainer>
+      <div class = "column1">
+        <img src = "./images/WordLogo.png">
+      </div>
+      <div class = "column2">
+        <h3> Contact for Assistance </h3> <br> 
+        <p> Phone Number: +601223334444 <br> 
+        Email: udp.support@gmail.com </p>
+      </div>
+    </div>
+</footer>
+
+<script src ="/script/api.js"> </script>
+
+</html>

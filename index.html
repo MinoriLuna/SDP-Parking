@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="index.css">
+  <title>UDP Parking</title>
+</head>
+
+<header>
+  <div class="logo"><a href="index.html">
+    <img src="./images/logo.png" alt="Logo" />
+</a></div>
+  <div class="features" id="features">  
+  <div class="feature"><a href="./login.html"> Log In </a></div>
+  <div class="feature"><a href="./signup.html"> Sign Up </a></div>
+</div>
+</header>
+<body>
+
+<div class="carousel-container">
+    <div class="carousel">
+      <div class="carousel-item"><img src="./images/drone-shot-of-parking-lot-6k32gc81iv1rl7uc.jpg" alt="Image 1"></div>
+      <div class="carousel-item"><img src="./images/high-tech-underground-parking-lot-8ekkguost0qs7630.jpg" alt="Image 2"></div>
+      <div class="carousel-item"><img src="./images/how-to-design-a-parking-lot-1.jpg" alt="Image 3"></div>
+    </div>
+  </div>
+
+<div id="main-container" class="main-container">
+</div>  
+
+<div class="GuestTextContainer">
+  <div class="guesttext">
+    <h1> You are currently not logged in. </h1>
+    <p> To access the functions: </p>
+    <p> please click <a href="login.html">here</a> to sign in. </p>
+  </div>
+</div>
+      
+<div class="script">
+<script>
+        const carousel = document.querySelector('.carousel');
+        const carouselItems = document.querySelectorAll('.carousel-item');
+    
+        let currentIndex = 0;
+    
+        function showSlide(index) {
+          carousel.style.transform = `translateX(-${index * 100}%)`;
+        }
+    
+        function nextSlide() {
+          currentIndex = (currentIndex + 1) % carouselItems.length;
+          showSlide(currentIndex);
+        }
+    
+        // Auto-scrolling functionality
+        const autoScrollInterval = 2000; // Change this value to adjust the interval
+        let autoScrollTimer = setInterval(nextSlide, autoScrollInterval);
+    
+        showSlide(currentIndex);
+</script>
+
+</div>
+</body>
+
+<footer>
+  <div class = footercontainer>
+    <div class = "column1">
+      <img src = "./images/WordLogo.png">
+    </div>
+    <div class = "column2">
+      <h3> Contact for Assistance </h3> <br> 
+      <p> Phone Number: +601223334444 <br> 
+      Email: udp.support@gmail.com </p>
+    </div>
+  </div>
+</footer>
+
+</html>

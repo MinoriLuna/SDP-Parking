@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="signup.css">
+    <title>Sign Up - UDP Parking</title>
+</head>
+
+<header>
+  <div class="logo"><a href="index.html">
+    <img src="./images/logo.png" alt="Logo" />
+</a></div>
+  <div class="features" id="features">  
+  <div class="feature"><a href="./login.html"> Login </a></div>
+  <div class="feature"><a href="./signup.html"> Sign up </a></div>
+</div>
+</header>
+
+<body>
+  <div class="prompt" id="prompt" style="display: none;"></div>
+  <div class="formcontainer">
+  <form action="https://backend.svrcd.xyz/entrypoint/signup.php" method="post" id="form" onsubmit="signup();return false;">
+      <h2>User Registration</h2>
+      <label for="fullname"> Full Name</label>
+      <input type="text" name="fullname" id="fullname" placeholder="Enter Your Full Name." required>
+      <br>
+      <label for="ic"> IC Number</label>
+      <input type="text" name="ic" id="ic" placeholder="Enter Your IC number." required>
+      <br>
+      <label for="email">Email</label>
+      <input type="text" name="email" id="email" placeholder="Enter Your Email Address." required>
+      <br>
+      <label for="phone">Phone Number</label>
+      <input type="text" name="phone" id="phone" placeholder="Enter Your Phone Number." required>
+      <br>
+      <label for="pwd">Password</label>
+      <input type="password" name="pwd" id="pwd" placeholder="Password" required>
+      <br>
+      <label for="dob">Date of Birth</label>
+      <input type="date" name="dob" id="dob" required>
+      <br>
+      <label for="disabled">Please select if you are disabled.</label>
+      <select name="disabled" id="disabled">
+          <option value="0">Not Disabled</option>
+          <option value="1">Disabled</option>
+      </select>
+      <br>
+      <button type ="submit" name="submit" id="submit">Sign Up</button>
+      <button type ="button" value="goback" name="btnBack">Back</button>
+    </form>
+  </div>
+   
+</body>
+
+<footer>
+  <div class = footercontainer>
+      <div class = "column1">
+        <img src = "./images/WordLogo.png">
+      </div>
+    <div class = "column2">
+      <h3> Contact for Assistance </h3> <br> 
+      <p> Phone Number: +601223334444 <br> 
+      Email: udp.support@gmail.com </p>
+    </div>
+  </div>
+</footer>
+
+<script src="./script/signup.js"></script>
+    
+</html>

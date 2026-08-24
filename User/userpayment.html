@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="userparking.css">
+  <title>Payment - UDP Parking</title>
+</head>
+<body>
+  <header>
+    <div class="logo"><a href="index.html">
+      <img src="./images/logo.png" alt="Logo" />
+    </a></div>
+    <div class="features" id="features">
+        <div class="feature"><a href="./manageAccount.html"> Account Management </a></div>
+        <div class="feature"><a href="/logout.html"> Log Out </a></div>
+      </div>
+    </div>
+  </header>
+  <div class="maincontainer">
+    <div class="welcometext">
+      <h1> User ID: </h1><h2 id="userid"></h2>
+      <h2> Pay for your unsettled parking here! </h2>
+    </div>
+    <div class="parking-container">
+      <form action="https://backend.svrcd.xyz/parking/getParkingRates.php" method="GET" id="rates">
+        <table id="fees" class="center">
+          <thead>
+            <tr>
+              <th> Parking Rates </th>
+            </tr>
+          </thead>
+          <tbody>
+          <!-- contents goes here-->
+          </tbody>
+          <tr>
+            <td>If vehicle remains in lot for 1 month, your vehicle will be towed. </td>
+          </tr>
+        </table>
+        <div class="btncontainer">
+          <button id="getrates" onclick="getRates();" class="confirmbtn">
+            <p>Get Latest Rates</p>
+          </button> 
+        </div>
+      </form>
+        <br> <br>
+        <form action="https://backend.svrcd.xyz/parking/payParking.php" method="POST" id="pay">
+          <div class="btncontainer">
+            <input type="hidden" id="token" name="token">
+            <input type="hidden" id="pid" name="pid">
+            <button onclick="pay();" class="confirmbtn">
+              <p>Pay for Parking</p>
+            </button> 
+          </div>
+        </form>
+      <!-- The Modal -->
+      <div id="paymentRedirect" class="modal">
+        <div class="modal-content">
+          <div class="modal-header">
+              <span id="pppclose" class="close">×</span>
+              <h2>Preview parking history</h2>
+          </div>
+          <div class="modal-body" style="background:#004AAD;">
+            <span>Parking Lot: <p id="lot">loading</p></span>
+            <span>Plate ID: <p id="plate">loading</p></span>
+            <span>Start: <p id="start">loading</p></span>
+            <span>End: <p id="end">loading</p></span>
+            <span>Duration: <p id="time">loading</p></span>
+            <span>Total Payable: <p id="total">loading</p></span>
+            <br />
+              <p>Click "Pay Now" to open up payment page:</p>
+              <!-- The HTML Code for the collpalseable. <details>
+                <p>url</p>
+            </details> -->
+              <p id="url"></p>
+          </div>
+          <div id="paynow" class="modal-footer">
+              <button type="button" class="btn btn-primary">Pay Now</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+<footer>
+  <div class = footercontainer>
+    <div class = "column1">
+      <img src = "./images/WordLogo.png">
+    </div>
+    <div class = "column2">
+      <h3> Contact for Assistance </h3> <br> 
+      <p> Phone Number: +601223334444 <br> 
+      Email: udp.support@gmail.com </p>
+    </div>
+  </div>
+</footer>
+
+<script src ="/script/api.js"> </script>
+<script src ="./script/payment.js"> </script>
+</html>

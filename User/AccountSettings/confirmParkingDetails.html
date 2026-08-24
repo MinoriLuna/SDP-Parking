@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="confirmParkingDetails.css">
+    <title>UDP Parking</title>
+</head>
+
+<header>
+    <div class="logo"><a href="index.html">
+      <img src="./images/logo.png" alt="Logo" />
+    </a></div>
+    <div class="features" id="features">
+        <div class="feature"><a href="./manageAccount.html"> Account Management </a></div>
+        <div class="feature"><a href=".//logout.html"> Log Out </a></div>
+      </div>
+    </div>
+</header>
+
+<body>
+  <div class="maincontainer">
+      <div class="welcometext">
+        <h1> Welcome, Jeremy</h1><br>
+        <h2> Please confirm your parking details.</h2>
+      </div>
+  <div class="prompt" id="prompt" style="display: none;"></div>
+  <div class="formcontainer">
+    <form action="">
+      <h2>Confirm Parking Details</h2>
+      <label for="carplateno"> Car Plate Number</label>
+      <input type="text" name="carplateno" id="carplateno" placeholder="Enter Your Car Plate Number." required>
+      <br>
+      <label for="lotno"> Lot Number</label>
+      <input type="text" name="lotno" id="lotno" placeholder="Enter the Lot Number." required>
+      <br>
+      <button type ="submit" name="confirm" id="btnconfirm">Confirm Details</button>
+      <button type ="button" value="goback" name="btnBack">Back</button>
+    </form>
+  </div>
+     
+</body>
+
+<footer>
+  <div class = footercontainer>
+    <div class = "column1">
+      <img src = "./images/WordLogo.png">
+    </div>
+    <div class = "column2">
+      <h3> Contact for Assistance </h3> <br> 
+      <p> Phone Number: +601223334444 <br> 
+      Email: udp.support@gmail.com </p>
+    </div>
+  </div>
+</footer>
+
+<script src="/script/api.js"></script>
+    
+</html>

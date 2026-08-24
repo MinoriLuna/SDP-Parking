@@ -1,0 +1,155 @@
+* {
+  margin : 0;
+  padding: 0;
+}
+
+body {
+  background-color: rgb(184, 217, 255);
+}
+
+.maincontainer {
+
+  display: flex;
+  flex-direction: column;
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-evenly;
+  grid-gap: 15px;
+  align-items: center;
+}
+
+.button-container p {
+  font-size: 30px;
+  font-weight: bold;
+  color: #fff;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+.button {
+  border-radius: 12px;
+  display: inline-block;
+  text-align: center;
+  padding: 3px;
+  background-color: rgba(85, 235, 255, 0.941); /* Button background color */
+  color: #fff; /* Button text color */
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin: 45px;
+  padding: 20px;
+}
+
+.button img {
+  object-fit: contain;
+  width: 200px;
+  height: 200px;
+}
+
+/* Add hover effect */
+.button:hover {
+  background-color: rgba(30, 146, 255, 0.578);
+}
+
+.welcometext {
+  padding: 20px;
+  text-align: center;
+}
+
+@media (max-width: 1600px) {
+  /* Adjust the margin/width accordingly. */
+  .button img {
+    width: 130px;
+    height: 130px;
+  }
+}
+
+@media (max-width: 900px) {
+  /* Adjust the margin/width accordingly. */
+  .button-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    grid-auto-rows: auto;
+  }
+
+  footer {
+    bottom: 0;
+    position: absolute;
+    width: 100%;
+  }
+}
+
+
+/* Header CSS */
+
+header {
+  background-color: #222222;
+  color: white;
+  padding: 10px 20px;
+  display: flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.logo {
+  font-size: 24px;
+}
+
+.logo img {
+  padding-left: 10px;
+  width: 130px;
+  height: 130px;
+}
+
+.features {
+  font-size: 22px;
+  display: flex;
+  gap: 30px;
+}
+
+.feature {
+  cursor: pointer;
+}
+
+.feature a {
+  text-decoration: none;
+  color: inherit; } 
+
+
+/*---------------------------------------*/
+/*Footer CSS*/
+
+footer {
+  bottom: 0;
+  position: absolute;
+  width: 100%;
+  margin-top: auto;
+}
+
+.footercontainer {
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  background-color: #222222;
+  width: 100%;
+  height: 130px;
+}
+
+.column1 img {
+  padding: 20px 0px 0px 30px;
+  width: 300px;
+  max-height: 110px;
+}
+
+.column2 h3, p{
+  color: white;
+  text-align: center;
+}
+
+.column2 {
+  padding-top: 25px;
+  padding-right: 30px;
+}

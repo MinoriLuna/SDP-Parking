@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="userparking.css">
+  <title>Empty Lots - UDP Parking</title>
+</head>
+<body>
+  <header>
+    <div class="logo"><a href="/User/index.html">
+        <img src="/images/logo.png" alt="Logo" />
+    </a></div>
+    <div class="features" id="features">  
+      <div class="feature"><a href="./assistance.html"> Help Desk </a></div>
+      <div class="feature"><a href="./AccountSettings/accountSettings.html"> Account Settings </a></div>
+      <div class="feature"><a href="/logout.html"> Log Out </a></div>
+    </div>
+  </header>
+  <div class="maincontainer">
+    <div class="welcometext">
+      <h1> User ID: </h1><h2 id="userid"></h2>
+    </div>
+    <div class="parking-container">
+        <form action="https://backend.svrcd.xyz/parking/checkEmptyLot.php" onsubmit="event.preventDefault();" method="GET" id="form">
+          <input type="hidden" id="token" name="token">
+          <table id="parkingTable" class="center" >
+            <caption style="color:white;">List of empty parking lots</caption>
+            <thead>
+              <tr>
+                <th>Empty Parking Lot Numbers</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- Table rows will be inserted here -->
+            </tbody>
+          </table>
+          <br><br>
+          <div class="img" id="map" style="display: none;">
+              <img src="Map.png">
+          </div>
+          <div class="btncontainer">
+            <button class="confirmbtn" type="submit" form="form" onclick="refresh();">Refresh</button>
+          </div>
+        </form>
+        <br>
+    </div>
+  </div>
+</body>
+
+<footer>
+  <div class = footercontainer>
+    <div class = "column1">
+      <img src = "./images/WordLogo.png">
+    </div>
+    <div class = "column2">
+      <h3> Contact for Assistance </h3> <br> 
+      <p> Phone Number: +601223334444 <br> 
+      Email: udp.support@gmail.com </p>
+    </div>
+  </div>
+</footer>
+
+<script src ="/script/api.js"> </script>
+<script src ="./script/userparking.js"> </script>
+</html>

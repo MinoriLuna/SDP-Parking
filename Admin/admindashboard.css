@@ -1,0 +1,122 @@
+* {
+    margin : 0;
+    padding: 0;
+}
+
+.maincontainer {
+    background-color: gray;
+    height: 35vw;
+}
+
+.button-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly
+}
+
+.button {
+    border-radius: 12px;
+    display: inline-block;
+    text-align: center;
+    padding: 10px;
+    background-color: #007bff; /* Button background color */
+    color: #fff; /* Button text color */
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin: 90px;
+    padding: 25px;
+}
+
+.button img {
+    max-width: 150px;
+    max-height: 150px;
+}
+
+/* Add hover effect */
+.button:hover {
+    background-color: #0056b3;
+}
+
+.welcometext {
+    padding: 20px;
+    text-align: center;
+}
+
+@media (max-width: 1400px) {
+    /* Adjust the margin/width accordingly. */
+    .button {
+      margin: 10px 5px;
+    }
+  }
+
+
+/* Header CSS */
+
+header {
+    background-color: #222222;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content:space-between;
+    align-items:center;
+  }
+  
+  .logo {
+    font-size: 24px;
+  }
+  
+  .logo img {
+    padding-left: 10px;
+    width: 130px;
+    height: 130px;
+  }
+  
+  .features {
+    font-size: 22px;
+    display: flex;
+    gap: 30px;
+  }
+  
+  .feature {
+    cursor: pointer;
+  }
+  
+  .feature a {
+    text-decoration: none;
+    color: inherit; } 
+  
+  
+  /*---------------------------------------*/
+  /*Footer CSS*/
+  
+footer {
+    bottom: 0;
+    position: relative;
+    width: 100%;
+}
+  
+  .footercontainer {
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    background-color: #222222;
+    width: 100%;
+    height: 130px;
+  }
+  
+  .column1 img {
+    padding: 20px 0px 0px 30px;
+    width: 300px;
+    max-height: 110px;
+  }
+  
+  .column2 h3, p{
+    color: white;
+    text-align: center;
+  }
+  
+  .column2 {
+    padding-top: 25px;
+    padding-right: 30px;
+  }

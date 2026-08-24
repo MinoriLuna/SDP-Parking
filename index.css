@@ -1,0 +1,171 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Main Code */
+
+.button-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly
+}
+
+.custom-button {
+  margin: 10px 5px;
+  align-items: center;
+  padding: 30px 30px;
+  background-color: #1654da;
+  color: #ffffff;
+  border-style: solid;
+  cursor: pointer;
+  border-radius: 7px;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.custom-button:hover {
+  background-color: #3a4374;
+}
+
+.custom-button a {
+  font-size: 20px;
+  text-decoration: none;
+  color: inherit;
+}
+
+body {
+  background-color: rgba(11, 14, 43, 0.815);
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  height: 100%;
+}
+
+.carousel-container {
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+  position: relative;
+}
+
+.carousel {
+  padding: 15px 0px 15px 0px;
+  display: flex;
+  transition: transform 0.3s ease-in-out;
+}
+
+.carousel-item {
+  flex: 0 0 100%;
+  height: 80%;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}
+
+@media (max-width: 1400px) {
+  /* Adjust the margin/width accordingly. */
+  .custom-button {
+    margin: 10px 5px;
+  }
+}
+
+.GuestTextContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 30px;
+}
+
+.guesttext h1, p{
+  text-align: center;
+  color: white;
+  padding: 10px;
+}
+
+.guesttext p {
+  font-size: 20px;
+}
+
+.guesttext a {
+  font-size: 20px;
+  color: rgb(74, 189, 255);
+}
+
+/* -------------------------------- */
+
+/* Header CSS */
+
+header {
+  background-color: #222222;
+  color: white;
+  padding: 10px 20px;
+  display: flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.logo {
+  font-size: 24px;
+}
+
+.logo img {
+  padding-left: 10px;
+  width: 130px;
+  height: 130px;
+}
+
+.features {
+  font-size: 22px;
+  display: flex;
+  gap: 30px;
+}
+
+.feature {
+  cursor: pointer;
+}
+
+.feature a {
+  text-decoration: none;
+  color: inherit; } 
+
+
+/*---------------------------------------*/
+/*Footer CSS*/
+
+footer {
+  bottom: 0;
+  position: absolute;
+  width: 100%;
+  margin-top: auto;
+  }
+  
+  .footercontainer {
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  background-color: #222222;
+  width: 100%;
+  height: 130px;
+  }
+
+.column1 img {
+  padding: 20px 0px 0px 30px;
+  width: 300px;
+  max-height: 110px;
+}
+
+.column2 h3, p{
+  color: white;
+  text-align: center;
+}
+
+.column2 {
+  padding-top: 25px;
+  padding-right: 30px;
+}

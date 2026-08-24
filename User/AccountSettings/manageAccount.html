@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="manageAccount.css">
+    <title>Manage Account - UDP Parking</title>
+</head>
+
+<body>
+  <header>
+    <div class="logo"><a href="index.html">
+      <img src="./images/logo.png" alt="Logo" />
+    </a></div>
+    <div class="features" id="features">
+        <div class="feature"><a href="./manageAccount.html"> Account Management </a></div>
+        <div class="feature"><a href="/logout.html"> Log Out </a></div>
+      </div>
+    </div>
+</header>
+<div class= "container">
+    <div class = "box"> <br>
+      <form action="" method="post" id="form">
+      <h1>Account Settings </h1>
+      <br>
+      <label for="name"> Full Name</label>
+      <input type="text" name="fname" placeholder="Full Name.">
+      <br>
+      <label for="ic"> IC Number</label>
+      <input type="text" name="ic" placeholder="IC Number.">
+      <br>
+      <label for="email">Email</label>
+      <br>
+      <input type="text" name="email" placeholder="Email Address.">
+      <br>
+      <label for="phone">Phone Number</label>
+      <input type="text" name="number" placeholder="Phone Number.">
+      <br>
+      <label for="pwd">Password</label>
+      <input type="password" name="pwd" placeholder="Password">
+      <br>
+      <label for="dob">Date of Birth</label>
+      <input type="text" name="dob" placeholder="DD-MM-YYYY">
+      <br>
+      <label for="disabled">Please select if you are disabled.</label>
+      <select id="disabled" name="disabled">
+        <option value="0">Not Disabled</option>
+        <option value="1">Disabled</option>
+      </select>
+      <br>
+      <button id="submit"> Save Edits </button>
+      <button type="button" value="goback" name="btnBack"> <a href ="accountSettings.html"> Back </a> </button>
+    </div>
+</div>
+</body>
+<script>
+
+  let loginForm = document.getElementById("form");
+
+  const element = document.getElementById("save");
+  element.addEventListener("click", submitform);
+
+  function submitform() {
+    alert ("Your Information has been updated.");
+  }
+</script>
+<script src="/script/api.js">
+</script>
+
+<footer>
+    <div class = footercontainer>
+      <div class = "column1">
+        <img src = "./images/WordLogo.png">
+      </div>
+      <div class = "column2">
+        <h3> Contact for Assistance </h3> <br> 
+        <p> Phone Number: +601223334444 <br> 
+        Email: udp.support@gmail.com </p>
+      </div>
+    </div>
+</footer>
+
+</html>

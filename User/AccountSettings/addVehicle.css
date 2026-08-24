@@ -1,0 +1,134 @@
+* {
+    margin : 0;
+    padding: 0;
+}
+
+body {
+    background-image: url(./images/blueroad.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.welcometext {
+    padding: 20px;
+    text-align: center;
+}
+
+label {
+    font-size: 20px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.form {
+    background-color: rgb(135, 206, 235);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    border-style: solid;
+    border-radius: 20px;
+    padding: 30px 60px 30px 60px;
+}
+
+.formcontainer {
+    display: flex;
+    justify-content: center; /* Centers horizontally */
+    align-items: center; /* Centers vertically */
+}
+
+.form input {
+    width: 350px;
+    margin: 15px;
+    padding: 15px;
+    font-size: 20px;
+    border-radius: 10px;
+}
+
+select {
+    margin: 10px;
+    padding: 10px;
+    font-size: 20px;
+    border-radius: 10px;
+}
+
+button {
+    margin: 10px;
+    padding: 10px;
+    font-size: 20px;
+    border-radius: 10px;
+    background-color: rgb(108, 122, 137);
+    cursor: pointer;
+    position: center; 
+}
+
+button:hover {
+    opacity: 0.7;
+}
+
+/* Header CSS */
+
+header {
+background-color: #222222;
+color: white;
+padding: 10px 20px;
+display: flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.logo {
+font-size: 24px;
+}
+
+.logo img {
+padding-left: 10px;
+width: 130px;
+height: 130px;
+}
+
+.features {
+font-size: 22px;
+display: flex;
+gap: 30px;
+}
+
+.feature {
+cursor: pointer;
+}
+
+.feature a {
+text-decoration: none;
+color: inherit; } 
+
+
+/*---------------------------------------*/
+/*Footer CSS*/
+
+footer {
+bottom: 0;
+position: absolute;
+margin-top: auto;
+width: 100%;
+}
+
+.footercontainer {
+margin: auto;
+display: flex;
+justify-content: space-between;
+background-color: #222222;
+width: 100%;
+height: 130px;
+}
+
+.column1 img {
+padding: 20px 0px 0px 30px;
+width: 300px;
+max-height: 110px;
+}
+
+.column2 h3, p{
+color: white;
+text-align: center;
+}
+
+.column2 {
+padding-top: 25px;
+padding-right: 30px;
+}

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="userparking.css">
+  <title>History - UDP Parking</title>
+</head>
+<body>
+  <header>
+    <div class="logo"><a href="/User/index.html">
+        <img src="/images/logo.png" alt="Logo" />
+    </a></div>
+    <div class="features" id="features">  
+      <div class="feature"><a href="./assistance.html"> Help Desk </a></div>
+      <div class="feature"><a href="./AccountSettings/accountSettings.html"> Account Settings </a></div>
+      <div class="feature"><a href="/logout.html"> Log Out </a></div>
+    </div>
+  </header>
+  <div class="maincontainer">
+    <div class="welcometext">
+      <h1> User ID: </h1><h2 id="userid"></h2>
+    </div>
+    <div class="parking-container">
+        <form action="https://backend.svrcd.xyz/users/getHistory.php" onsubmit="event.preventDefault();" method="GET" id="form">
+            <input type="hidden" id="token" name="token">
+            <label>
+                <input type="radio" min="2023-08" name="date-type" id="radio-month" onchange="toggleDateInput();" checked>
+                Select a Month:
+            </label>
+            <input type="month" id="date-month" name="within"><br><br>
+
+            <label>
+                <input type="radio" name="date-type" id="radio-range" onchange="toggleDateInput();">
+                Select a Date Range:
+            </label>
+            <div class="date-range-input" id="date-range" style="display: none;">
+                Start Date: <input type="date" name="start"><br>
+                End Date: <input type="date" name="end"><br>
+            </div>
+            <div class="btncontainer">
+                <button class="confirmbtn" type="submit" form="form" onclick="retrieve();">Search</button>
+            </div>
+        </form>
+        <br>
+        <table id="parkingTable" class="center" >
+            <caption style="color:white; font-size: -webkit-xxx-large;">Past Histories</caption>
+            <thead>
+              <tr>
+                <th>ParkingID</th>
+                <th>PaymentID</th>
+                <th>LotID</th>
+                <th>Plate No.</th>
+                <th>Date</th>
+                <th>Duration</th>
+                <th>Amount</th>
+                <th>Status</th>
+                <th>AuthCode</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- Table rows will be inserted here -->
+            </tbody>
+        </table>
+    </div>
+  </div>
+</body>
+
+<footer>
+  <div class = footercontainer>
+    <div class = "column1">
+      <img src = "./images/WordLogo.png">
+    </div>
+    <div class = "column2">
+      <h3> Contact for Assistance </h3> <br> 
+      <p> Phone Number: +601223334444 <br> 
+      Email: udp.support@gmail.com </p>
+    </div>
+  </div>
+</footer>
+
+<script src ="/script/api.js"> </script>
+<script src ="./script/userhistory.js"> </script>
+</html>

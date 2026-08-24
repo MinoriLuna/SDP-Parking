@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="adminUser.css">
+    <title>Document</title>
+</head>
+<header>
+    <div class="logo"><a href="index.html">
+      <img src="./images/logo.png" alt="Logo" />
+  </a></div>
+    <div class="features" id="features">
+      <!-- Check if cookies exist -->
+    </div>
+</header>
+<script>
+    const featuresContainer = document.getElementById('features');
+  
+    if (document.cookie.includes('$token')) {
+      featuresContainer.innerHTML += '<div class="feature"><a href="./manageAccount.html"> Account Management </a></div>';
+      featuresContainer.innerHTML += '<div class="feature"><a href="/logout.html"> Log Out </a></div>';
+    } else {
+      featuresContainer.innerHTML += '<div class="feature"><a href="./login.html"> Log In </a></div>';
+      featuresContainer.innerHTML += '<div class="feature"><a href="./signup.html"> Sign Up </a></div>';
+    }
+  </script>
+<body>
+<div class="mainbody">
+    <div class="container">
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="Search for names...">
+        </div>
+        <table id="myTable">
+            <tr>
+                <th>User ID</th>
+                <th>Full Name</th>
+                <th>Date of Birth</th>
+                <th>Email</th>
+                <th>Phone Number</th>
+                <th>IC Number</th>
+                <th>Disabled</th>
+                <th>Disabled Cat</th>
+                <th>Disabled SN</th>
+                <th>Elderly</th>
+                <th>Actions</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Rebe Magarrell</td>
+                <td>1987-04-28</td>
+                <td>banana@yopmail.com</td>
+                <td>030926087654</td>
+                <td>0</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>
+                  <button class="edit">Edit </button>
+                  <button class="delete">Delete</button>
+                  <!-- Will be changed dynamically next time -->
+                </td>
+            </tr>
+            <tr>
+                <td>Jane Smith</td>
+                <td>25</td>
+                <td>Los Angeles</td>
+            </tr>
+            <tr>
+                <td>Bob Johnson</td>
+                <td>35</td>
+                <td>Chicago</td>
+            </tr>
+            
+        </table>
+    </div>
+</div>
+</body>
+<footer>
+    <div class = footercontainer>
+      <div class = "column1">
+        <img src = "./images/WordLogo.png">
+      </div>
+      <div class = "column2">
+        <h3> Contact for Assistance </h3> <br> 
+        <p> Phone Number: +601223334444 <br> 
+        Email: udp.support@gmail.com </p>
+      </div>
+    </div>
+  </footer>
+</html>
